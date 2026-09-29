@@ -15,7 +15,10 @@ device.name2=sunny
 supported.versions=
 supported.patchlevels=
 supported.vendorpatchlevels=
+LOS_SYSTEM_ROOT_WORKAROUND=1
 '; } # end properties
+
+# NOTE: LOS_SYSTEM_ROOT_WORKAROUND to workaround for los recovery
 
 
 ### AnyKernel install

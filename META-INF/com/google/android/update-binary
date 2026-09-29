@@ -151,7 +151,7 @@ mount_all() {
         setup_mountpoint /system_root;
         mount --move /system /system_root && echo "/system_root (moved)" >&2;
       fi;
-      if [ $? != 0 ]; then
+      if [ $? != 0 ] && [ "$(file_getprop anykernel.sh LOS_SYSTEM_ROOT_WORKAROUND)" != 1 ]; then
         (umount /system;
         umount -l /system) 2>/dev/null;
         mount -o ro -t auto /dev/block/$byname/system$slot /system_root && echo "/system_root (direct)" >&2;
